@@ -4,21 +4,31 @@
     <meta charset="utf8">
     <title>Breakbubbles</title>
     <link href="_css/main.css" rel="stylesheet">
-    <script src="_js/modernizr.sj"></script>
+     <link href="_css/game.css" rel="stylesheet">
     <script src="_js/jquery-3.1.0.min.js"></script>
-    <script>
-      Modernizr.load([{
-        load:"_js/game.js"
-      }])
-      </script>
+    <script src="_js/ui.js"></script>
+    <script src="_js/bubble.js"></script>
+    <script src="_js/game.js"></script>
+    <script src="_js/board.js"></script>
   </head>
   <body>
     <div id="page"> 
         <div id="top_bar"></div>
         <div id="game"></div>
         <div id="footer_bar"></div>
+        <div id="board"></div>   
+        <div id="start_game" class="dialog">
+          <div id="start_game_message">
+            <h2>Rozpocznij nową grę</h2>
+          </div>  
+          <div class="but_start_game button">
+            Nowa gra
+          </div>
+        </div>
     </div>
     <script type="text/javascript">
+      var game = new BubbleShoot.Game();
+      game.init();
     </script>
   </body> 
 </html> 
